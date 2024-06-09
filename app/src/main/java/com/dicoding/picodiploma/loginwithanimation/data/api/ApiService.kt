@@ -18,7 +18,8 @@ interface ApiService {
 
     // Fitur Mencari berdasarkan lokasi yang ada
     @GET("building/{location}")
-    suspend fun getDetailBuilding(@Path("location")location: String): DetailBuildingResponse
+    suspend fun getDetailBuilding(
+        @Path("location")location: String): DetailBuildingResponse
 
     @FormUrlEncoded
     @POST("api/v1/auth/register")
