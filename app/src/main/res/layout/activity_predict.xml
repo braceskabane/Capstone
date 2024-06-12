@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.predict.PredictActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextContent.BodyMedium.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Hasil Prediksi"
+        android:layout_marginBottom="50dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_predict"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvResult2"
+        style="@style/TextContent.BodyMedium.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="500.000.000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/simulasi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<TableLayout
+    android:id="@+id/simulasi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+        <TextView
+            style="@style/TextContent.BodyMedium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp"
+            android:text="Simulasi KPR" />
+    </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_building"
+                />
+            <TextView
+                style="@style/TextContent.BodyMedium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="Harga Properti" />
+            <TextView
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginEnd="5dp"
+                android:textColorHint="@color/black"
+                android:hint="Rp" />
+            <TextView
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:id="@+id/tvResult"
+                android:text="500.000.000" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_money"
+                />
+            <TextView
+                style="@style/TextContent.BodyMedium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="Uang Muka" />
+            <TextView
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginEnd="5dp"
+                android:textColorHint="@color/black"
+                android:hint="Rp" />
+            <EditText
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:id="@+id/ed_UangMuka"
+                android:text="75.000.000" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_credit"
+                />
+            <TextView
+                style="@style/TextContent.BodyMedium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="Tenor Kredit" />
+            <EditText
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:id="@+id/ed_kredit"
+                android:text="20" />
+            <TextView
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:hint="/Tahun" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_bungabank"
+                />
+            <TextView
+                style="@style/TextContent.BodyMedium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="Suku Bunga" />
+            <EditText
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:id="@+id/ed_sukubunga"
+                android:text="8" />
+            <TextView
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:hint="%" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult2"
+        android:backgroundTint="@color/primary"
+        android:text="Submit">
+        
+    </Button>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_predict">
+
+        <TextView
+            style="@style/TextContent.BodyMedium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="Hasil"
+            android:textSize="14sp" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/icon_cicilan" />
+
+            <TextView
+                style="@style/TextContent.BodyMedium.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="16dp"
+                android:text="Cicilan"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/ed_cicilan"
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="8.000.000"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/TextContent.BodyMedium.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:hint="/Bulan"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
