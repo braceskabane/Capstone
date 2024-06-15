@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/party_bliss2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.main.MainActivity">
+
+    <!--    <com.airbnb.lottie.LottieAnimationView-->
+    <!--        android:id="@+id/action_profile"-->
+    <!--        android:layout_width="45sp"-->
+    <!--        android:layout_height="45sp"-->
+    <!--        android:layout_marginStart="28sp"-->
+    <!--        android:layout_marginTop="20sp"-->
+    <!--        android:background="@drawable/background_history"-->
+    <!--        android:padding="6sp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:lottie_autoPlay="true"-->
+    <!--        app:lottie_loop="true"-->
+    <!--        app:lottie_rawRes="@raw/icon1" />-->
+
+    <TextView
+        android:id="@+id/terraVision"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terravision"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp">
+
+        <TextView
+            android:id="@+id/text_discover"
+            style="@style/TEXT"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Prices"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/text_urnewhouse"
+            style="@style/TEXT"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="of your new house!"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvResult2"
+            style="@style/TextContent.BodyMedium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="500.000.000"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/simulasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_content_buttom_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/action_profile"
+            tools:ignore="UselessParent">
+            <TextView
+                android:id="@+id/text_KPR"
+                style="@style/TEXT"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="30sp"
+                android:layout_marginEnd="28sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="KPR"
+                android:textColor="@color/party_bliss2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:id="@+id/simulasi"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_building"
+                        />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:text="Property Prices" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/black"
+                        android:hint="Rp" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/tvResult"
+                        android:text="500.000.000" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_money"
+                        />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:text="Down Payment" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/black"
+                        android:hint="Rp" />
+                    <EditText
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/ed_UangMuka"
+                        android:text="xx.xxx.xxx" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_credit"
+                        />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:text="Credit Tenor" />
+                    <EditText
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/ed_kredit"
+                        android:text="xx" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:hint="/Tahun" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_bungabank"
+                        />
+
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Interest Rate"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/ed_sukubunga"
+                        android:text="x" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:hint="%" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btn_predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/party_bliss2"
+                android:layout_marginTop="280dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/simulasi">
+            </Button>
+
+            <TextView
+                android:id="@+id/text_"
+                style="@style/TEXT"
+                android:layout_marginTop="380dp"
+                android:layout_marginStart="30sp"
+                android:layout_marginEnd="28sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Result"
+                android:textColor="@color/party_bliss2"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="420dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_predict">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/icon_cicilan" />
+
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="instalment"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/ed_cicilan"
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="x.xxx.xxx"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="/Bulan"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
