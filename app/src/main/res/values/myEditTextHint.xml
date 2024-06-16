@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="MyEditText">
+        <attr name="myEditTextHint" format="string"/>
+    </declare-styleable>
+</resources>

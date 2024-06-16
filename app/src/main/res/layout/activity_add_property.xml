@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/party_bliss"
+    tools:context=".view.addproperty.AddPropertyActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBack"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        android:layout_marginStart="25sp"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/background_icon"
+        android:padding="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:tint="@color/white"
+        android:src="@drawable/ic_round_arrow_back_ios_24"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/button_add"
+        android:layout_width="45sp"
+        android:layout_height="45sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginEnd="25sp"
+        android:background="@drawable/background_icon"
+        android:padding="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:tint="@color/white"
+        android:src="@drawable/ic_baseline_file_upload_24"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Property"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imageBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageBack" />
+
+    <!-- Upload Photo and other Button -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/Scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBack">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/background_content_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageBack">
+
+            <ImageView
+                android:id="@+id/previewImageView"
+                android:layout_width="0dp"
+                android:layout_height="225dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_icon"
+                android:backgroundTint="@color/white"
+                android:padding="20sp"
+                android:src="@drawable/icon_add_to_photos_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/Rounded"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_images"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="50dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
+                app:layout_constraintTop_toTopOf="@+id/previewImageView" />
+
+            <LinearLayout
+                android:id="@+id/buttonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/previewImageView"
+                app:layout_constraintEnd_toEndOf="@id/previewImageView"
+                app:layout_constraintStart_toStartOf="@id/previewImageView"
+                app:layout_constraintTop_toBottomOf="@id/previewImageView">
+
+                <Button
+                    android:id="@+id/galleryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/party_bliss2"
+                    android:text="@string/gallery"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/cameraButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/party_bliss"
+                    android:text="@string/camera"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/tv_propertyname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_description"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonContainer">
+
+                <EditText
+                    android:id="@+id/ed_add_propertyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="top|start"
+                    android:hint="Name..."
+                    android:inputType="textMultiLine"
+                    android:lines="1"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="15sp" />
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/tv_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_description"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_propertyname">
+
+                <EditText
+                    android:id="@+id/ed_add_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="top|start"
+                    android:hint="Location..."
+                    android:inputType="textMultiLine"
+                    android:lines="1"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="15sp" />
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/item_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_location">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/icon_surface"
+                            android:backgroundTint="@color/white" />
+                        <EditText
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_gravity="center"
+                            android:id="@+id/spec_surfaceArea"
+                            android:textColor="@color/white"
+                            android:maxLines="1"
+                            android:textColorHint="@color/white" />
+                        <TextView
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:hint="m&#178;" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/icon_bedroom"
+                            android:backgroundTint="@color/white" />
+                        <EditText
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:maxLines="1"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:id="@+id/spec_bedroom"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/icon_bathroom"
+                            android:backgroundTint="@color/white" />
+                        <EditText
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:maxLines="1"
+                            android:textColorHint="@color/white"
+                            android:id="@+id/spec_bathroom"
+                            />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/icon_building"
+                            android:backgroundTint="@color/white"
+                            />
+                        <EditText
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:maxLines="1"
+                            android:id="@+id/spec_buildingArea"
+                            />
+                        <TextView
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:hint="m&#178;" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/icon_stairs"
+                            android:backgroundTint="@color/white"
+                            />
+                        <EditText
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:maxLines="1"
+                            android:id="@+id/spec_floor"
+                            android:textColorHint="@color/white" />
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/icon_calendar"
+                            android:backgroundTint="@color/white" />
+                        <EditText
+                            style="@style/TextContent.BodyMedium.Gray"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:textSize="14sp"
+                            android:layout_marginStart="2.5dp"
+                            android:layout_marginEnd="2.5dp"
+                            android:id="@+id/spec_year"
+                            android:maxLines="1"
+                            android:textColorHint="@color/white"
+                            />
+                    </TableRow>
+                </TableLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/descriptionScrollView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/background_description"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_icon">
+
+                <EditText
+                    android:id="@+id/ed_add_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="top|start"
+                    android:hint="Description..."
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="10"
+                    android:minLines="5"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/primary_dark"
+                    android:textSize="15sp" />
+            </ScrollView>
+
+            <ProgressBar
+                android:id="@+id/progressBar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/previewImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/background_content_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBack">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_received_message"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu"
+            android:layout_gravity="bottom"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
