@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.main.MainActivity">
+
+    <TextView
+        android:id="@+id/terraVision"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/terravision"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp">
+
+        <TextView
+            android:id="@+id/text_discover"
+            style="@style/TEXT"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/the_prices"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/text_urnewhouse"
+            style="@style/TEXT"
+            android:layout_marginStart="30sp"
+            android:layout_marginEnd="28sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/of_your_new_house"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvResult2"
+            style="@style/TextContent.BodyMedium.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/property_price"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/simulasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_content_buttom_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/action_profile"
+            tools:ignore="UselessParent">
+            <TextView
+                android:id="@+id/text_KPR"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="30sp"
+                android:layout_marginEnd="28sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/kpr"
+                style="@style/TEXT_Profile"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:id="@+id/simulasi"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_building"
+                        />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:text="@string/property_prices"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/black"
+                        android:hint="@string/currency_symbol" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/tvResult"
+                        android:text="@string/property_price_value" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_money"
+                        />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:text="@string/down_payment"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginEnd="5dp"
+                        android:textColorHint="@color/black"
+                        android:hint="@string/currency_symbol" />
+                    <EditText
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/ed_UangMuka"
+                        android:text="@string/down_payment_value" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_credit"
+                        />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14sp"
+                        android:text="@string/credit_tenor"
+                        android:textColor="@color/black"/>
+                    <EditText
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/ed_kredit"
+                        android:text="@string/credit_tenor_value" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:hint="@string/year" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_bungabank"
+                        />
+
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/interest_rate"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:id="@+id/ed_sukubunga"
+                        android:text="@string/interest_rate_value" />
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:hint="@string/percent" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btn_predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Btn_picture"
+                android:layout_marginTop="280dp"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/submit"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/simulasi">
+            </Button>
+
+            <TextView
+                android:id="@+id/text_"
+                android:layout_marginTop="380dp"
+                android:layout_marginStart="30sp"
+                android:layout_marginEnd="28sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/result"
+                style="@style/TEXT_Profile"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="420dp"
+                android:layout_gravity="center_horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_predict">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/icon_cicilan" />
+
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/instalment"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/ed_cicilan"
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/instalment_value"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        style="@style/TextContent.BodyMedium.Gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="@string/month"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="14sp" />
+                </TableRow>
+            </TableLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

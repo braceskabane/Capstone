@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#22c55e</color>
+    <color name="primary2">#202C33</color>
+    <!-- Primary Dark Color -->
+    <color name="primary_dark">#111B21</color>
+    <!-- Secondary Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="navy">#2D3D4F</color>
+    <color name="navy_light">#4A6274</color>
+    <!-- Primary Text Color -->
+    <color name="primary_text">#1f2937</color>
+    <!-- Secondary Text Color -->
+    <color name="secondary_text">#9ca3af</color>
+    <!-- Input Background Color -->
+    <color name="input_background">#f3f4f6</color>
+    <color name="icon_background">#FFFFFF</color>
+    <!-- Error Color -->
+    <color name="error">#f87171</color>
+    <!-- Received Message Background Color -->
+    <color name="received_message_background">#f8fafc</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+
+
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="pink_500">#D81B60</color>
+    <color name="pink_200">#FF8FAF</color>
+    <color name="lavender">#8692f7</color>
+
+    <color name="night_Background">#181A28</color>
+    <color name="blusky">#2E5CB8</color>
+    <color name="azure_mist">#F1FDFC</color>
+    <color name="onyx">#373A40</color>
+    <color name="party_bliss">#4481eb</color>
+    <color name="party_bliss2">#04befe</color>
+</resources>

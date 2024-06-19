@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="Widget.LoginWithAnimation.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.LoginWithAnimation.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/logo</item>
+    </style>z
+
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/party_bliss2</item>
+    </style>
+    <style name="BottomNavigationView.Dark" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/white</item>
+    </style>
+</resources>
